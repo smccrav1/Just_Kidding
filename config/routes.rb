@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
+  
+  get 'sessions/new'
+  
+  resources :sessions
+
+  resources :users
+  
+  resources :jokes
+
+  get 'jokes' => 'jokes#index'
+
+  get 'new' => 'jokes#new'
+  
+  get 'jokes/create'
+
   get 'home/index'
 
-  get 'home/about'
+  get 'about' => 'home#about'
 
   get 'credits' => 'home#credits'
 

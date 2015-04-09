@@ -1,0 +1,11 @@
+<div class ="jumbotron">
+<h1>All jokes</h1>
+
+<% @jokes.each do |joke| %>    
+  <p><%= joke.user %></p>    
+  <ul>      
+    <li><%= joke.content %></li>    
+    <li><%= joke.comment %></li>    
+  </ul>
+<% end %>
+</div>

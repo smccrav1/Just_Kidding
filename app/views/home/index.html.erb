@@ -1,4 +1,13 @@
-<h1>Just_Kidding</h1>
-<p>The app that is JKING</p>
+<div class ="jumbotron">
+    <div class="container">
+        <h1>Just Kidding</h1>
+        <p>The app that is JKING</p> 
+        <br/>
+        <%= form_tag("http://google.com", method: "get") do %>
+        <%= label_tag(:goog, "Search for external jokes!:", style: "color:blue;") %>
+        <%= text_field_tag(:goog,nil,class: "goog_text" ) %>
+        <%= submit_tag("Search") %>
+        <% end %>
+    </div>
+</div>
 
-<%= link_to "Credits" , credits_path %>
