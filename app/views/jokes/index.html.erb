@@ -2,7 +2,10 @@
 <h1>All jokes</h1>
 
 <% @jokes.each do |joke| %>    
-  <p><%= joke.user %></p>    
+  <p><%= current_user.email %></p>
+  <%= link_to 'Delete Joke', delete_joke_path(joke.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  &nbsp; &nbsp;
+  <%= link_to 'Edit Joke', update_joke_path(joke.id), method: :edit %>
   <ul>      
     <li><%= joke.content %></li>    
     <li><%= joke.comment %></li>    

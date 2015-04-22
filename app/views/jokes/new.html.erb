@@ -1,15 +1,15 @@
-<div class ="jumbotron">
+<div class ="footpage">
+s
 <h1>Submit jokes</h1>
 
-<h1>New Joke</h1>
-<%= form_for(@joke) do |v| %>  
-<%= v.label :user %>  
-<%= v.text_field :user %><br/>  
-<%= v.label :content %>  
-<%= v.text_field :content %><br/>  
-<%= v.label :comment %>  
-<%= v.text_field :comment %><br/>  
-<%= v.submit %>
+<%= form_tag new_joke_path do %>
+  <p>
+    <%= label_tag :content, "content"  %>     
+    <%= text_field_tag "content" %></br>
+    <%= label_tag :comment, "comment"  %>     
+    <%= text_field_tag "comment" %></br>
+    <%= submit_tag "Submit Joke" %> 
+  </p>
 <% end %>
 
 </div>

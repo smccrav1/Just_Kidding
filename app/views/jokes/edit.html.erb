@@ -1,0 +1,15 @@
+<h1>Edit Video</h1>
+
+<%= form_tag update_joke_path do %>
+  <p>
+    <%= label_tag :id, "ID"  %>     
+    <%= text_field_tag :id, @joke.id %></br> 
+    <%= label_tag :user, "User"  %>     
+    <%= text_field_tag :user, @joke.user %></br>
+    <%= label_tag :content, "Content"  %>     
+    <%= text_field_tag :link, @joke.content %></br>
+    <%= label_tag :comment, "Comment"  %>     
+    <%= text_field_tag :comment, @joke.comment %></br>
+    <%= submit_tag "Update joke" %> 
+  </p>
+<% end %>

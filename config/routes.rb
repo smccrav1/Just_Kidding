@@ -6,8 +6,16 @@ Rails.application.routes.draw do
 
   resources :users
   
-  resources :jokes
+  #resources :jokes
+  
+  post 'jokes' => 'jokes#create' , as: :new_joke
+  
+  post 'jokes/:id' => 'jokes#update', as: :update_joke
 
+  delete 'jokes/:id' => 'jokes#destroy' , as: :delete_joke
+  
+  get 'jokes/:id/edit' => 'jokes#edit', as: :edit_joke
+  
   get 'jokes' => 'jokes#index'
 
   get 'new' => 'jokes#new'

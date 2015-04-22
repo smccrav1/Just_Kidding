@@ -19,13 +19,6 @@
 
 body {
    padding-top: 50px;
-   margin: 0px;
-   min-height: 100%;
-}
-
-html {
-   margin: 0px;
-   height: 100%;
 }
 
 
@@ -56,5 +49,19 @@ html {
 .jumbotron li {
   color: #fff;
   font-size: 18px;
+  font-weight: bold;
+}
+
+.footpage {
+  background-image:url("https://cloud.githubusercontent.com/assets/9423846/7126998/5a0d44f2-e20c-11e4-86a4-f542c2202150.jpg");
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ /* this is exeption for sumbit joke page. Set color paragraph causes problems */
+
+.footpage p {
+  font-size: 25px;
   font-weight: bold;
 }
